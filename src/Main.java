@@ -6,13 +6,14 @@ public class Main {
 
         Animal animal1 = new Perro("Firulais",2,"Yeison","Beagle");
         Animal animal2 = new Gato("Michi",1,"Yesica",true);
-        Animal animal3 = new Ave("Piolin",1,"Jhony",200);
-
+        Animal animal3 = new Ave("Piolin",1,"Jhony",80);
 
 
        animal1.imprimirFichas();
        animal2.imprimirFichas();
        animal3.imprimirFichas();
+
+
 
         ((Vacunable) animal1).registrarVacuna("Rabia");
         ((Vacunable) animal1).registrarVacuna("Distemper");
@@ -24,9 +25,21 @@ public class Main {
         System.out.println("Vacunas del perro: " + ((Vacunable) animal1).getVacunasAplicadas());
         System.out.println("Vacunas del gato: " + ((Vacunable) animal2).getVacunasAplicadas());
 
+        Clinica clinica = new Clinica("EPS SURA","CRA 134 12 57");
+        Perro perro = new Perro("Marla",1,"Zully","Criolla");
+        Gato gato = new Gato("Amiri",1,"Yes",true);
+
+        Asegurable[] elementosAsegurados = {perro,gato,clinica};
+
+        System.out.println("--- Reporte de Pólizas ---");
+        for (Asegurable item : elementosAsegurados) {
+            System.out.println("Póliza #: " + item.obtenerNumeroPoliza());
+            System.out.println("--------------------------");
+        }
 
         Animal animal4 = new Conejo("Bugs Bunny" , 18,"Ana");
 
         System.out.println(animal4.calcularCostoConsulta());
+        animal4.imprimirFichas();
     }
 }

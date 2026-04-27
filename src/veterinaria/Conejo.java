@@ -13,12 +13,7 @@ public class Conejo extends Animal{
     }
 
     @Override
-    public double calcularPrimaSeguro() {
-        return 0;
-    }
-
-    @Override
     public void imprimirFichas() {
-
+        super.imprimirFichas();
     }
 }

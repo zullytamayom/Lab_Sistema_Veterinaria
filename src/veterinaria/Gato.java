@@ -3,7 +3,7 @@ package veterinaria;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Gato extends Animal implements Vacunable{
+public class Gato extends Animal implements Vacunable,Asegurable{
     private boolean esEsterilizado;
     private List<String> vacunas = new ArrayList<>();
 
@@ -24,12 +24,14 @@ public class Gato extends Animal implements Vacunable{
     }
 
     @Override
+    public String obtenerNumeroPoliza() {
+        return "123";
+    }
+
+    @Override
     public void imprimirFichas() {
-        System.out.println("Nombre : " + getNombre()+
-                "Edad : "+ getEdad() +
-                "Dueño : "+ getNombreDueno() +
-                "Esterilizado : " + esEsterilizado +
-                "Costo de la consulta : " + calcularCostoConsulta());
+        super.imprimirFichas();
+        System.out.println("Esterilizado : " + esEsterilizado);
     }
 
     @Override

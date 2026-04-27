@@ -3,7 +3,7 @@ package veterinaria;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Perro extends Animal implements Vacunable{
+public class Perro extends Animal implements Vacunable,Asegurable{
     private String raza;
     private List<String> vacunas = new ArrayList<>();
 
@@ -15,21 +15,23 @@ public class Perro extends Animal implements Vacunable{
     @Override
     public double calcularCostoConsulta() {
 
-        return 45000 + (getEdad()* 3000) ;
+        return 45000 + (edad * 3000) ;
     }
 
     @Override
     public double calcularPrimaSeguro(){
-        return 80.000 * getEdad();
+        return 80000 * edad;
+    }
+
+    @Override
+    public String obtenerNumeroPoliza() {
+        return "242325";
     }
 
     @Override
     public void imprimirFichas() {
-        System.out.println("Nombre : " + getNombre()+
-                "Edad : "+ getEdad() +
-                "Dueño : "+ getNombreDueno() +
-                "Raza : " + raza +
-                "Costo de la consulta : " + calcularCostoConsulta());
+        super.imprimirFichas();
+        System.out.println("Raza : " + raza);
     }
 
     @Override

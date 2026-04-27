@@ -2,9 +2,9 @@ package veterinaria;
 
 public abstract class Animal {
 
-    private String nombre;
-    private int edad;
-    private String nombreDueno;
+    protected String nombre;
+    protected int edad;
+    protected String nombreDueno;
 
     public Animal(String nombre, int edad, String nombreDueno) {
         this.nombre = nombre;
@@ -12,21 +12,13 @@ public abstract class Animal {
         this.nombreDueno = nombreDueno;
     }
 
-    public int getEdad() {
-        return edad;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getNombreDueno() {
-        return nombreDueno;
-    }
-
     public abstract double calcularCostoConsulta();
 
-    public abstract double calcularPrimaSeguro();
-
-    public abstract void imprimirFichas();
+    public  void imprimirFichas(){
+        System.out.println("--- FICHA VETERINARIA ---");
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad + " años");
+        System.out.println("Dueño: " + nombreDueno);
+        System.out.println("Costo de Consulta: $" + calcularCostoConsulta());
+    };
 }
