@@ -9,6 +9,9 @@ public class Main {
         Animal animal3 = new Ave("Piolin",1,"Jhony",200);
 
 
+
+
+
        animal1.imprimirFichas();
        animal2.imprimirFichas();
        animal3.imprimirFichas();

@@ -1,0 +1,24 @@
+package veterinaria;
+
+public class Conejo extends Animal{
+
+
+    public Conejo(String nombre, int edad, String nombreDueno) {
+        super(nombre, edad, nombreDueno);
+    }
+
+    @Override
+    public double calcularCostoConsulta() {
+        return 0;
+    }
+
+    @Override
+    public double calcularPrimaSeguro() {
+        return 0;
+    }
+
+    @Override
+    public void imprimirFichas() {
+
+    }
+}
