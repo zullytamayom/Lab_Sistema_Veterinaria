@@ -18,4 +18,5 @@ public abstract class Animal {
 
     public abstract double calcularCostoConsulta();
 
+    public abstract double calcularPrimaSeguro();
 }

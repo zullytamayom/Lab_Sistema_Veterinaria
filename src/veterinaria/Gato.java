@@ -12,4 +12,11 @@ public class Gato extends Animal{
     public double calcularCostoConsulta() {
         return 38000;
     }
+
+    @Override
+    public double calcularPrimaSeguro() {
+
+        return esEsterilizado ? 120000 : 200000;
+    }
+
 }
