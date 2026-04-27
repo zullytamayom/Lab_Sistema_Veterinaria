@@ -34,6 +34,7 @@ public class Main {
         System.out.println("--- Reporte de Pólizas ---");
         for (Asegurable item : elementosAsegurados) {
             System.out.println("Póliza #: " + item.obtenerNumeroPoliza());
+            System.out.println("Prima : " + item.calcularPrimaSeguro());
             System.out.println("--------------------------");
         }
 
