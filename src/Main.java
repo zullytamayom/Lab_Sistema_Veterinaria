@@ -10,8 +10,6 @@ public class Main {
 
 
 
-
-
        animal1.imprimirFichas();
        animal2.imprimirFichas();
        animal3.imprimirFichas();
@@ -26,5 +24,9 @@ public class Main {
         System.out.println("Vacunas del perro: " + ((Vacunable) animal1).getVacunasAplicadas());
         System.out.println("Vacunas del gato: " + ((Vacunable) animal2).getVacunasAplicadas());
 
+
+        Animal animal4 = new Conejo("Bugs Bunny" , 18,"Ana");
+
+        System.out.println(animal4.calcularCostoConsulta());
     }
 }

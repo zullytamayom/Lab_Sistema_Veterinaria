@@ -9,7 +9,7 @@ public class Conejo extends Animal{
 
     @Override
     public double calcularCostoConsulta() {
-        return 0;
+        return 35000;
     }
 
     @Override
