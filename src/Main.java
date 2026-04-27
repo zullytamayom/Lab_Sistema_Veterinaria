@@ -1,7 +1,4 @@
-import veterinaria.Animal;
-import veterinaria.Ave;
-import veterinaria.Gato;
-import veterinaria.Perro;
+import veterinaria.*;
 
 
 public class Main {
@@ -15,6 +12,16 @@ public class Main {
        animal1.imprimirFichas();
        animal2.imprimirFichas();
        animal3.imprimirFichas();
+
+        ((Vacunable) animal1).registrarVacuna("Rabia");
+        ((Vacunable) animal1).registrarVacuna("Distemper");
+
+        ((Vacunable) animal2).registrarVacuna("Parvovirus");
+        ((Vacunable) animal2).registrarVacuna("Leucemia Felina");
+
+
+        System.out.println("Vacunas del perro: " + ((Vacunable) animal1).getVacunasAplicadas());
+        System.out.println("Vacunas del gato: " + ((Vacunable) animal2).getVacunasAplicadas());
 
     }
 }

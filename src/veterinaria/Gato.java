@@ -1,7 +1,11 @@
 package veterinaria;
 
-public class Gato extends Animal{
+import java.util.ArrayList;
+import java.util.List;
+
+public class Gato extends Animal implements Vacunable{
     private boolean esEsterilizado;
+    private List<String> vacunas = new ArrayList<>();
 
     public Gato(String nombre, int edad, String nombreDueno, boolean esEsterilizado) {
         super(nombre, edad, nombreDueno);
@@ -28,6 +32,17 @@ public class Gato extends Animal{
                 "Costo de la consulta : " + calcularCostoConsulta());
     }
 
+    @Override
+    public void registrarVacuna(String nombreVacuna) {
+        vacunas.add(nombreVacuna);
+        System.out.println("Vacuna '" + nombreVacuna + "' registrada para el gato.");
+
+    }
+
+    @Override
+    public int getVacunasAplicadas() {
+        return vacunas.size();
+    }
 }
 
 
