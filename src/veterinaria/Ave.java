@@ -12,4 +12,18 @@ public class Ave extends Animal{
     public double calcularCostoConsulta() {
         return 28000 + (pesoGramo *500);
     }
+
+    @Override
+    public double calcularPrimaSeguro() {
+        return 0;
+    }
+
+    @Override
+    public void imprimirFichas() {
+        System.out.println("Nombre : " + getNombre()+
+                          "Edad : "+ getEdad() +
+                          "Dueño : "+ getNombreDueno() +
+                          "Peso : " + pesoGramo +
+                          "Costo de la consulta : " + calcularCostoConsulta());
+    }
 }

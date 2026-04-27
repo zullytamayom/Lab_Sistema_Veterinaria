@@ -18,4 +18,14 @@ public class Perro extends Animal{
     public double calcularPrimaSeguro(){
         return 80.000 * getEdad();
     }
+
+    @Override
+    public void imprimirFichas() {
+        System.out.println("Nombre : " + getNombre()+
+                "Edad : "+ getEdad() +
+                "Dueño : "+ getNombreDueno() +
+                "Raza : " + raza +
+                "Costo de la consulta : " + calcularCostoConsulta());
+    }
 }
+

@@ -19,4 +19,15 @@ public class Gato extends Animal{
         return esEsterilizado ? 120000 : 200000;
     }
 
+    @Override
+    public void imprimirFichas() {
+        System.out.println("Nombre : " + getNombre()+
+                "Edad : "+ getEdad() +
+                "Dueño : "+ getNombreDueno() +
+                "Esterilizado : " + esEsterilizado +
+                "Costo de la consulta : " + calcularCostoConsulta());
+    }
+
 }
+
+

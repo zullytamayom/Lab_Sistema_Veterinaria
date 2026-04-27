@@ -16,7 +16,17 @@ public abstract class Animal {
         return edad;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getNombreDueno() {
+        return nombreDueno;
+    }
+
     public abstract double calcularCostoConsulta();
 
     public abstract double calcularPrimaSeguro();
+
+    public abstract void imprimirFichas();
 }
